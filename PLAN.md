@@ -99,5 +99,5 @@ compare providers with links to current primary documentation.
    classify requests, retrieve stable policy, query live status, route exceptions, and evaluate.
 4. Confirm whether this stays a personal learner tool or supports public learner accounts.
    Start personal; retain an upgrade path without implementing teams now.
-5. Vercel CLI is installed; login is pending. Choose the personal account and connect a
-   new project after authentication. The personal progress database is still unconfigured.
+5. Vercel CLI is authenticated as `gaspard0302`. Connect a new personal project when the
+   website is ready. The personal progress database is still unconfigured.

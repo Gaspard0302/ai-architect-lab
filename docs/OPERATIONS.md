@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Local files and shell | Read/write available in the project workspace | Use deterministic repo commands |
 | GitHub | Connected account and authenticated CLI: `Gaspard0302` | Public repo created; skills and app source publish together; study corpus excluded |
-| Website host | Vercel CLI 54.20.1 installed; no saved credentials | Complete login, then link a personal preview project |
+| Website host | Vercel CLI 54.20.1 authenticated as `gaspard0302`; no project linked | Link a new personal preview project when the website is ready |
 | Progress database | Schema retained; no credentials or data migrated | Create a personal project and apply both SQL migrations |
 | Browser QA | Browser automation available in the chat environment | Exercise a configured local app or preview |
 | Learning operations MCP | Not implemented | Expose the shared service operations below |

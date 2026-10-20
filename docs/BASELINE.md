@@ -29,8 +29,8 @@
 - The user confirmed one public repo for skills and the future mock-exam website. The
   public repository is created. The user confirmed the private corpus stays local;
   public source history excludes it.
-- Personal hosting, a personal progress database, and learner-facing MCP operations are
-  unconfigured. No website has been deployed.
+- Vercel CLI is authenticated as `gaspard0302`. No website project is linked or deployed.
+  A personal progress database and learner-facing MCP operations remain unconfigured.
 
 The raw captures intentionally retain their original whitespace. Do not apply blanket
 whitespace cleanup to immutable source material.
