@@ -22,9 +22,13 @@
 - Reusing AirDropped dependencies allowed content checks but was insufficient for full
   app verification: ESLint could not resolve `eslint-plugin-react-hooks`, and Vitest
   stalled while importing native tooling. Those processes were stopped and the temporary
-  dependency copy removed. Lint and unit tests are **not verified**.
-- The production build and browser walkthrough have **not been run**.
-- `pnpm check` and the GitHub CI workflow are defined but have **not passed end to end**.
+  dependency copy removed. Local macOS lint and unit tests remain **unverified**;
+  the clean Linux CI run below subsequently passed both.
+- The production build subsequently passed in CI. The browser walkthrough has **not been run**.
+- The public CI workflow subsequently **passed end to end** on `8bc28eb`: public code/skill
+  checks, unit tests, skill packaging, and production build. See the
+  [verified CI run](https://github.com/Gaspard0302/ai-architect-lab/actions/runs/39463712992).
+  Local macOS dependency problems remain separate from the successful clean CI run.
 - Skill behavior and clean installation in recipient tools have **not been evaluated**.
 - The user confirmed one public repo for skills and the future mock-exam website. The
   public repository is created. The user confirmed the private corpus stays local;

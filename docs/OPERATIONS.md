@@ -28,7 +28,8 @@ Development database inspection and learner-facing progress access are different
 | Check formatted course structure | `pnpm check:lessons` |
 | Assess raw/lesson sentence coverage | `python3 skills/format-course-module/scripts/validate.py --course architect --coverage` |
 | Report blueprint coverage | `pnpm report --course architect` |
-| Check skills and transcription overlap | `pnpm check:skills` |
+| Check public skill entrypoints and references | `pnpm check:skills` |
+| Check skill/transcription overlap locally | `python3 scripts/check-skill-overlap.py` (private corpus required) |
 | Build release artifacts | `pnpm skills:build` |
 | Public code/skills CI gate | `pnpm check` then `pnpm build` |
 | Local study corpus checks | `pnpm check:local-content` (requires private course files) |
@@ -64,6 +65,9 @@ learner answers. Do not expose a service-role database key through a chat tool.
    tag the checked commit, publish the artifact, and return the release URL.
 
 These are proposed acceptance flows. They are not marked complete by creating these docs.
+
+The [mock-exam and plugin proposal](MOCK-EXAM-AND-PLUGINS.md) adds the learner-facing
+tool contract and product acceptance gates. These remain proposed until agreed.
 
 ## Recovery
 

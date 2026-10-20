@@ -5,6 +5,10 @@ Name: AI Architect Lab. One public GitHub repository will hold the skills and th
 Initial audience: Gaspard, then other independent learners.
 Both source courses are retained; the architect path leads the first website version.
 
+The detailed [mock-exam and plugin proposal](docs/MOCK-EXAM-AND-PLUGINS.md) defines
+the next product discussion: modes, session behavior, shared services, chat tools,
+platform packaging, and release checks. Its defaults are proposals until agreed.
+
 ## Product promise
 
 Learn an architecture concept, make a decision in a realistic case, build something

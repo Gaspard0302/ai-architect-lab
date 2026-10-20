@@ -19,6 +19,7 @@ The editable skills exist only under `skills/`. `.agents/skills` and `.claude/sk
 are discovery symlinks to that directory. ZIP exports are generated and ignored.
 
 Read [the proposed project plan](PLAN.md) to decide what to build next,
+[the mock-exam and plugin proposal](docs/MOCK-EXAM-AND-PLUGINS.md) for the learner experience,
 [the operating guide](docs/OPERATIONS.md) for chat workflows and tool readiness,
 and [content provenance](docs/CONTENT.md) before sharing course captures.
 See [the preparation baseline](docs/BASELINE.md) for checks that passed and remaining setup work.
