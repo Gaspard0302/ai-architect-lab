@@ -1,0 +1,280 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(13rem, 1fr);
+  gap: var(--s-7);
+  align-items: start;
+}
+
+.article {
+  min-width: 0;
+  max-width: var(--measure);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.head {
+  padding-bottom: var(--s-5);
+  border-bottom: 1px solid var(--line-strong);
+  margin-bottom: var(--s-6);
+}
+
+.eyebrow {
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.back {
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.title {
+  margin-top: var(--s-2);
+  font-size: var(--t-2xl);
+  font-variation-settings: 'SOFT' 20, 'opsz' 48;
+}
+
+.topics {
+  margin-top: var(--s-3);
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+}
+
+/* ---------------------------------------------------------------- lesson prose */
+
+.prose {
+  font-size: var(--t-base);
+}
+
+.prose :global(h1),
+.prose :global(h2),
+.prose :global(h3),
+.prose :global(h4),
+.prose :global(h5),
+.prose :global(h6) {
+  /* Deep links land under the sticky header, never behind it. */
+  scroll-margin-top: 6rem;
+}
+
+/* The lesson's own h1 repeats the page title; the header above carries it. */
+.prose :global(h1) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.prose :global(h2) {
+  margin-top: var(--s-8);
+  margin-bottom: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: var(--border);
+  font-size: var(--t-lg);
+  font-variation-settings: 'SOFT' 20, 'opsz' 32;
+}
+
+.prose :global(h3) {
+  margin-top: var(--s-6);
+  margin-bottom: var(--s-3);
+  font-size: var(--t-md);
+}
+
+.prose :global(h4),
+.prose :global(h5),
+.prose :global(h6) {
+  margin-top: var(--s-5);
+  margin-bottom: var(--s-2);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.prose :global(p) {
+  margin-top: var(--s-4);
+}
+
+.prose :global(ul),
+.prose :global(ol) {
+  margin-top: var(--s-4);
+  padding-inline-start: var(--s-5);
+}
+
+.prose :global(strong) {
+  font-weight: 600;
+}
+
+.prose :global(hr) {
+  margin: var(--s-7) 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Blockquotes are a teaching aside, not a wall: a hairline rule and quieter ink. */
+.prose :global(blockquote) {
+  margin: var(--s-5) 0;
+  padding: 0 0 0 var(--s-4);
+  border-inline-start: 2px solid var(--line);
+  color: var(--fg-muted);
+}
+
+.prose :global(blockquote p) {
+  margin-top: var(--s-2);
+}
+
+.prose :global(blockquote p:first-child) {
+  margin-top: 0;
+}
+
+/* The first blockquote of a lesson is the frontmatter note ("What this module is").
+   It is an introduction, so it reads as a lede rather than as a quotation. */
+.prose > :global(blockquote:first-of-type) {
+  margin-top: 0;
+  padding: var(--s-4) var(--s-5);
+  border: 0;
+  border-radius: var(--r-md);
+  background: var(--bg-sunken);
+  border-inline-start: 3px solid var(--accent-line);
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: var(--t-md);
+  line-height: var(--leading-snug);
+  font-variation-settings: 'SOFT' 40, 'opsz' 20;
+}
+
+.prose :global(code) {
+  padding: 0.1em 0.3em;
+  background: var(--bg-inset);
+  border-radius: var(--r-sm);
+  word-break: break-word;
+}
+
+.prose :global(pre) {
+  margin-top: var(--s-4);
+  padding: var(--s-4);
+  overflow-x: auto;
+  background: var(--bg-inset);
+  border: var(--border);
+  border-radius: var(--r-md);
+  font-size: var(--t-sm);
+  line-height: var(--leading-snug);
+}
+
+.prose :global(pre code) {
+  padding: 0;
+  background: none;
+  white-space: pre;
+  word-break: normal;
+}
+
+/* Wide comparison tables are common in these modules; let them scroll rather than
+   squeeze the column. `display: block` is what makes overflow apply to a table. */
+.prose :global(table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: var(--s-4);
+  border-collapse: collapse;
+  font-size: var(--t-sm);
+}
+
+.prose :global(th),
+.prose :global(td) {
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--line);
+  text-align: start;
+  vertical-align: top;
+}
+
+.prose :global(th) {
+  background: var(--bg-sunken);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.prose :global(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------------- pager */
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line-strong);
+}
+
+.pagerLink {
+  display: block;
+  padding: var(--s-4);
+  border: var(--border);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  transition: border-color var(--fast) var(--ease), background var(--fast) var(--ease);
+}
+
+.pagerLink:hover {
+  border-color: var(--accent-line);
+  background: var(--bg-sunken);
+  color: inherit;
+}
+
+.pagerNext {
+  text-align: end;
+}
+
+.pagerLabel {
+  display: block;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.pagerTitle {
+  display: block;
+  margin-top: var(--s-1);
+  font-family: var(--font-display);
+  font-size: var(--t-base);
+}
+
+@media (max-width: 60rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  /* One column: let auto-placement follow the DOM, so the contents disclosure
+     (rendered before the article) sits above it instead of after it. */
+  .article {
+    max-width: none;
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 40rem) {
+  .title {
+    font-size: var(--t-xl);
+  }
+
+  .pager {
+    grid-template-columns: 1fr;
+  }
+
+  .pagerNext {
+    text-align: start;
+  }
+}

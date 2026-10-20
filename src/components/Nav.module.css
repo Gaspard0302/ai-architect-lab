@@ -1,0 +1,50 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+}
+
+.link {
+  position: relative;
+  padding: 0.35rem 0.1rem;
+  margin-inline-end: var(--s-4);
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+  letter-spacing: var(--track-wide);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--fast) var(--ease);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--slow) var(--ease);
+}
+
+.link:hover {
+  color: var(--fg);
+}
+
+.link:hover::after {
+  transform: scaleX(0.35);
+}
+
+.active {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.active::after {
+  transform: scaleX(1);
+}
+
+.nav > :last-child {
+  margin-inline-end: 0;
+}

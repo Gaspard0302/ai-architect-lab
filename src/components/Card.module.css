@@ -1,0 +1,58 @@
+.card {
+  position: relative;
+  background: var(--bg-raised);
+  border: var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.pad {
+  padding: var(--s-5);
+}
+
+.flush {
+  padding: 0;
+}
+
+/* A card that wants attention keeps the accent as a rule down its leading edge,
+   never as a fill — the page stays paper. */
+.marked::before {
+  content: '';
+  position: absolute;
+  inset-block: -1px;
+  inset-inline-start: -1px;
+  width: 3px;
+  border-start-start-radius: var(--r-lg);
+  border-end-start-radius: var(--r-lg);
+  background: var(--accent);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--t-md);
+  font-weight: 500;
+  letter-spacing: var(--track-tight);
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: var(--s-1);
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.aside {
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+}

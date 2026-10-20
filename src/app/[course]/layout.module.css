@@ -1,0 +1,136 @@
+.shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+}
+
+.bar {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding: var(--s-3) var(--s-5);
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--t-md);
+  font-variation-settings: 'SOFT' 30, 'opsz' 20;
+  letter-spacing: var(--track-tight);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark span {
+  color: var(--accent);
+}
+
+/* The course switcher reads as a segmented stamp, not a dropdown: two courses, both
+   always visible, so you can never be on the wrong one without seeing it. */
+.switcher {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  background: var(--bg-sunken);
+}
+
+.course {
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--r-full);
+  color: var(--fg-muted);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+
+.course:hover {
+  color: var(--fg);
+}
+
+.courseOn {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.courseOn:hover {
+  color: var(--bg);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  max-width: var(--page);
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--s-7) var(--s-5) var(--s-9);
+}
+
+/* Who you are, at the far end of the bar: the name in the display face so it reads as a
+   signature on the paper, with sign-out kept quiet beside it. */
+.who {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-inline-start: var(--s-4);
+  border-inline-start: var(--border);
+}
+
+.whoName {
+  font-family: var(--font-display);
+  font-size: var(--t-sm);
+  letter-spacing: var(--track-tight);
+  white-space: nowrap;
+}
+
+.signOut {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--fg-faint);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--fast) var(--ease);
+}
+
+.signOut:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 40rem) {
+  .bar {
+    gap: var(--s-3);
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .who {
+    padding-inline-start: 0;
+    border-inline-start: 0;
+  }
+}

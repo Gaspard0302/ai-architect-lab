@@ -1,0 +1,41 @@
+.timer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  background: var(--bg-raised);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.value {
+  font-size: var(--t-md);
+  letter-spacing: var(--track-tight);
+}
+
+.warn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.warn .label {
+  color: var(--accent);
+}
+
+.expired {
+  border-color: var(--no);
+  color: var(--no);
+}
+
+.expired .label {
+  color: var(--no);
+}

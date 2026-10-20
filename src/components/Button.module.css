@@ -1,0 +1,88 @@
+.base {
+  --btn-bg: transparent;
+  --btn-fg: var(--fg);
+  --btn-line: var(--line-strong);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--btn-line);
+  border-radius: var(--r-md);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  letter-spacing: var(--track-wide);
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background var(--fast) var(--ease),
+    border-color var(--fast) var(--ease),
+    color var(--fast) var(--ease),
+    transform var(--fast) var(--ease);
+}
+
+.base:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.base:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.base:disabled,
+.base[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.primary {
+  --btn-bg: var(--accent);
+  --btn-fg: var(--accent-fg);
+  --btn-line: var(--accent);
+}
+
+.primary:hover:not(:disabled) {
+  --btn-bg: var(--a-deep);
+  --btn-line: var(--a-deep);
+}
+
+.secondary {
+  --btn-bg: var(--bg-raised);
+  box-shadow: var(--shadow-sm);
+}
+
+.secondary:hover:not(:disabled) {
+  --btn-line: var(--accent);
+  --btn-fg: var(--accent);
+}
+
+.ghost {
+  --btn-line: transparent;
+  padding-inline: 0.5rem;
+  color: var(--fg-muted);
+}
+
+.ghost:hover:not(:disabled) {
+  --btn-fg: var(--accent);
+  background: var(--accent-tint);
+}
+
+.sm {
+  padding: 0.3rem 0.65rem;
+  font-size: var(--t-xs);
+}
+
+.lg {
+  padding: 0.7rem 1.4rem;
+  font-size: var(--t-base);
+}
+
+.block {
+  width: 100%;
+}

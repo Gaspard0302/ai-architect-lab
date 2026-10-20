@@ -1,0 +1,20 @@
+node_modules/
+.next/
+out/
+dist/
+next-env.d.ts
+*.tsbuildinfo
+*.log
+.DS_Store
+.vitest/
+.vercel/
+.kilo/
+.claude/worktrees/
+.env*
+!.env.example
+courses/*/data/
+
+# Private study corpus retained only on this laptop
+/courses/architect/
+/courses/developer/
+/.local/

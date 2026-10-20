@@ -1,0 +1,136 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-6);
+  max-width: var(--page-narrow);
+  padding: var(--s-6);
+  border: var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-sm);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.legend {
+  padding: 0;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+/* Four segments that read like the tabs they replaced, each carrying its own count so
+   the choice is made on evidence rather than on a guess. */
+.segments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+@media (max-width: 34rem) {
+  .segments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-1);
+  padding: var(--s-3) var(--s-4);
+  border-inline-start: 1px solid var(--line);
+  background: var(--bg);
+  cursor: pointer;
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+
+.segment:first-child {
+  border-inline-start: 0;
+}
+
+.segment:hover {
+  background: var(--bg-sunken);
+}
+
+.segment:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+.segmentOn,
+.segmentOn:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.segmentLabel {
+  font-size: var(--t-sm);
+  font-weight: 500;
+}
+
+.segmentCount {
+  font-family: var(--font-mono);
+  font-size: var(--t-lg);
+  line-height: 1;
+  letter-spacing: var(--track-tight);
+}
+
+.hint {
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+}
+
+.row {
+  display: grid;
+  gap: var(--s-5);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.select {
+  width: 100%;
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  background: var(--bg);
+  font-size: var(--t-base);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding-top: var(--s-5);
+  border-top: var(--border);
+}
+
+.count {
+  font-size: var(--t-sm);
+  color: var(--fg-muted);
+}
+
+.count strong {
+  font-family: var(--font-mono);
+  font-size: var(--t-lg);
+  color: var(--fg);
+  margin-inline-end: var(--s-1);
+}
+
+.countSub {
+  color: var(--fg-faint);
+}

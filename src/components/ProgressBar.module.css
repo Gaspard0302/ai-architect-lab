@@ -1,0 +1,39 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+  color: var(--fg-muted);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-wide);
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: var(--track-caps);
+  font-family: var(--font-mono);
+}
+
+.track {
+  height: 6px;
+  background: var(--bg-inset);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--r-full);
+  transition: width var(--slow) var(--ease);
+}
+
+.ok .fill {
+  background: var(--ok);
+}

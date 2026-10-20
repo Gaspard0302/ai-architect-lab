@@ -1,0 +1,47 @@
+.head {
+  margin-bottom: var(--s-6);
+  max-width: var(--measure);
+}
+
+.eyebrow {
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: var(--s-2);
+  font-size: var(--t-xl);
+  font-variation-settings: 'SOFT' 20, 'opsz' 36;
+}
+
+.lede {
+  margin-top: var(--s-3);
+  color: var(--fg-muted);
+  max-width: 54ch;
+}
+
+.warning {
+  margin-bottom: var(--s-5);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--r-md);
+  background: var(--accent-tint);
+  font-size: var(--t-sm);
+}
+
+.resumeActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.fine {
+  margin-top: var(--s-4);
+  color: var(--fg-faint);
+  font-size: var(--t-sm);
+}

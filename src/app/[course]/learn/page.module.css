@@ -1,0 +1,145 @@
+.head {
+  max-width: var(--measure);
+  margin-bottom: var(--s-7);
+}
+
+.eyebrow {
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: var(--s-2);
+  font-size: var(--t-xl);
+  font-variation-settings: 'SOFT' 20, 'opsz' 36;
+}
+
+.lede {
+  margin-top: var(--s-3);
+  color: var(--fg-muted);
+}
+
+/* The lesson list reads like a table of contents in the booklet: a hairline between
+   rows, the module number set in mono at the margin, no boxes. */
+.lessons {
+  list-style: none;
+  padding: 0;
+  border-top: var(--border);
+}
+
+.lessons > li {
+  border-bottom: var(--border);
+}
+
+.lesson {
+  display: flex;
+  gap: var(--s-5);
+  padding: var(--s-5) var(--s-2);
+  text-decoration: none;
+  transition: background var(--fast) var(--ease);
+}
+
+.lesson:hover {
+  background: var(--bg-sunken);
+  color: inherit;
+}
+
+.module {
+  flex: none;
+  width: 2.5rem;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-lg);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  transition: color var(--fast) var(--ease);
+}
+
+.lesson:hover .module {
+  color: var(--accent);
+}
+
+.lessonBody {
+  display: block;
+  min-width: 0;
+}
+
+.lessonTitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--t-md);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--track-tight);
+}
+
+.lesson:hover .lessonTitle {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 0.2em;
+}
+
+.meta {
+  display: block;
+  margin-top: var(--s-1);
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-wide);
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-2);
+  margin-top: var(--s-3);
+}
+
+.topic {
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  color: var(--fg-muted);
+  font-size: var(--t-xs);
+  line-height: 1.6;
+}
+
+.lesson:hover .topic {
+  border-color: var(--line-strong);
+}
+
+/* Glossary definitions rendered on the server and handed to the client filter. */
+.def > :global(p) {
+  margin-top: var(--s-2);
+}
+
+.def > :global(p:first-child) {
+  margin-top: 0;
+}
+
+.def :global(blockquote) {
+  margin: var(--s-3) 0;
+  padding-inline-start: var(--s-4);
+  border-inline-start: 2px solid var(--line);
+  color: var(--fg-muted);
+}
+
+.def :global(code) {
+  padding: 0.1em 0.3em;
+  background: var(--bg-inset);
+  border-radius: var(--r-sm);
+}
+
+@media (max-width: 40rem) {
+  .lesson {
+    gap: var(--s-3);
+    padding-inline: 0;
+  }
+
+  .module {
+    width: 1.8rem;
+    font-size: var(--t-md);
+  }
+}

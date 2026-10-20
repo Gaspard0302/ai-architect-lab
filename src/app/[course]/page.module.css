@@ -1,0 +1,310 @@
+.head {
+  margin-bottom: var(--s-6);
+}
+
+.eyebrow {
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: var(--s-2);
+  font-size: var(--t-xl);
+  font-variation-settings: 'SOFT' 20, 'opsz' 36;
+  max-width: 22ch;
+}
+
+.block {
+  margin-bottom: var(--s-5);
+}
+
+.resumeRow {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.twoUp {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
+}
+
+.sectionTitle {
+  font-size: var(--t-lg);
+  font-variation-settings: 'SOFT' 20, 'opsz' 28;
+}
+
+.sectionNote {
+  margin-top: var(--s-2);
+  margin-bottom: var(--s-4);
+  max-width: var(--measure);
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+}
+
+.prose {
+  max-width: var(--measure);
+  color: var(--fg-muted);
+}
+
+.note {
+  margin-top: var(--s-4);
+  color: var(--fg-faint);
+  font-size: var(--t-sm);
+  max-width: var(--measure);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}
+
+/* --------------------------------------------------------------- weakest objectives */
+
+.weakList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: weak;
+}
+
+.weakItem {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding-block: var(--s-3);
+  border-top: var(--border);
+}
+
+.weakItem:first-child {
+  border-top: 0;
+}
+
+.weakId {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  color: var(--accent);
+  letter-spacing: var(--track-wide);
+}
+
+.weakText {
+  font-size: var(--t-sm);
+  line-height: var(--leading-snug);
+}
+
+.weakScore {
+  font-family: var(--font-mono);
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: end;
+}
+
+.weakScore small {
+  display: block;
+  color: var(--fg-faint);
+  font-size: var(--t-xs);
+}
+
+.lowSample {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: var(--border);
+}
+
+.lowLabel {
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  margin-inline-end: var(--s-2);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-full);
+  background: var(--bg-sunken);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+}
+
+.chip small {
+  color: var(--fg-faint);
+}
+
+/* ------------------------------------------------------------------------- mastery */
+
+.domains {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  align-items: start;
+}
+
+.domain {
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  margin-top: var(--s-4);
+  border-collapse: collapse;
+  font-size: var(--t-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--s-2) 0;
+  border-top: var(--border);
+  text-align: start;
+  font-weight: 400;
+  vertical-align: baseline;
+}
+
+.table thead th {
+  border-top: 0;
+  padding-top: 0;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+
+.num {
+  text-align: end;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-inline-start: var(--s-3);
+}
+
+.untouched {
+  color: var(--fg-faint);
+}
+
+.thin td,
+.thin th {
+  color: var(--no);
+}
+
+.objLink {
+  display: block;
+  text-decoration: none;
+}
+
+.objLink:hover .objText {
+  color: var(--accent);
+}
+
+.objId {
+  display: block;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: var(--track-wide);
+}
+
+.objText {
+  display: block;
+  line-height: var(--leading-snug);
+  max-width: 34ch;
+  transition: color var(--fast) var(--ease);
+}
+
+/* -------------------------------------------------------------------- mock history */
+
+.mockList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mockItem + .mockItem {
+  border-top: var(--border);
+}
+
+.mockLink {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: baseline;
+  gap: var(--s-4);
+  padding-block: var(--s-3);
+  text-decoration: none;
+}
+
+.mockLink:hover {
+  color: inherit;
+}
+
+.mockLink:hover .mockDate {
+  color: var(--accent);
+}
+
+.mockDate {
+  transition: color var(--fast) var(--ease);
+}
+
+.mockRaw {
+  font-family: var(--font-mono);
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-muted);
+}
+
+.pass,
+.fail {
+  padding: 0.05rem 0.5rem;
+  border-radius: var(--r-full);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pass {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.fail {
+  background: var(--no-bg);
+  color: var(--no);
+}
+
+/* ------------------------------------------------------------------------- footer */
+
+.rated {
+  margin-top: var(--s-6);
+  padding-top: var(--s-4);
+  border-top: var(--border);
+  color: var(--fg-muted);
+  font-size: var(--t-sm);
+}
+
+@media (max-width: 34rem) {
+  .weakItem {
+    grid-template-columns: 1fr auto;
+  }
+
+  .weakId {
+    grid-column: 1 / -1;
+  }
+}
